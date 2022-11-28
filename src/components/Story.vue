@@ -1,62 +1,25 @@
 <template>
   <div class="body">
     <div class="storyContainer">
-
       <div class="story">
+        <a href="">
+
+        
         <i id="size" class="fa fa-plus-circle" aria-hidden="true"></i>
+        </a>
         <div class="image">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg"
             alt=""
           />
         </div>
-                <div class="image">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg"
-            alt=""
-          />
-        </div>
-                <div class="image">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg"
-            alt=""
-          />
-        </div>
-                <div class="image">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg"
-            alt=""
-          />
-        </div>        <div class="image">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg"
-            alt=""
-          />
-        </div>        <div class="image">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg"
-            alt=""
-          />
-        </div>        <div class="image">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg"
-            alt=""
-          />
-        </div>        <div class="image">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg"
-            alt=""
-          />
-        </div>        <div class="image">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg"
-            alt=""
-          />
-        </div>
       </div>
-      
-
-
+      <div class="image">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pierre-Person.jpg/1200px-Pierre-Person.jpg"
+          alt=""
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -68,8 +31,12 @@ export default {
 </script>
 
 <style scoped>
+a{
+  text-decoration: none;
+  color: #eee;
+}
 .body {
-    margin-top: 20px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 .story {
@@ -96,15 +63,19 @@ export default {
   border-radius: 50%;
   background-color: black;
   border-width: thick;
+  transition: transform .2s;
 }
 img {
   height: 100%;
   width: 100%;
   border: 1px solid orangered;
   border-radius: 50%;
-
   object-fit: cover;
 }
+.image:hover{
+transform:scale(1.5);
+}
+
 h1 {
   display: flex;
   color: white;

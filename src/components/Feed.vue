@@ -8,7 +8,7 @@
       <div class="randomPictures">
         <div class="square">
           <div class="picture" v-for="picture in pictures" :key="picture.id">
-            <img :src="picture.download_url" :alt="picture.author" />
+            <img :src="picture.download_url" :alt="picture.author"  />
             <div class="author">
               <div class="authorName">
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
@@ -54,12 +54,27 @@ export default {
     },
   },
   mounted() {
-    this.callingApi("https://picsum.photos/v2/list?page=5&limit=24");
+    this.callingApi("https://picsum.photos/v2/list?page=30&limit=20");
   },
 };
 </script>
 
 <style scoped>
+.likes{
+  color: rgb(255, 112, 3);
+}
+.commets{
+  color: grey;
+}
+.picture:hover{
+
+  border-radius: 3%;
+  border: 0.2px solid #eee;
+  transform: scale(1.2 );
+  box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.49);
+-webkit-box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.49);
+-moz-box-shadow: -1px 10px 5px 0px rgba(0,0,0,0.49);
+}
 h1{
     font-size: 16px;
 }
@@ -92,32 +107,39 @@ h1{
   flex-direction: inherit;
 }
 .square {
+  
   width: 300px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
+  
+  
 }
 .picture {
   width: 400px;
+  transition: transform .2s; 
   margin: auto;
-  margin-top: 0%;
+  margin-bottom: 6%;
+  /* backdrop-filter: blur(10px); */
 }
 img {
   border-radius: 3%;
   max-width: 100%;
-  max-height: 100%;
+  max-height:100%;
 }
 .author {
   display: flex;
   align-content: space-around;
   justify-content: space-around;
-  width: 99%;
+  width: 100%;
   height: 30px;
   background-color: transparent;
   font-weight: bold;
   color: #eee;
-  border-radius: 5%;
+  border-radius: 12%;
+  backdrop-filter: blur(5px);
+  
   /* border-right: 1px solid rgb(227, 227, 227);
   border-bottom: 1px solid rgb(227, 227, 227);
   border-left: 1px solid rgb(227, 227, 227); */

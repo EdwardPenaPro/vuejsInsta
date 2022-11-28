@@ -1,44 +1,69 @@
 <template>
   <div class="body">
     <div class="menu">
-        <hr>
+      <hr />
       <div class="option">
-        
         <i class="fa fa-film" aria-hidden="true"></i>
-        <h1>Feed</h1>
+        <a href="#">
+          <h1>Feed</h1>
+        </a>
       </div>
       <div class="option">
         <i class="fa fa-search" aria-hidden="true"></i>
-        <h1>Explore</h1>
+
+        <a href="#">
+          <h1>Explore</h1>
+        </a>
       </div>
       <div class="option">
         <i class="fa fa-bell" aria-hidden="true"></i>
-        <h1>Norifications</h1>
+
+        <a href="#">
+          <h1>Norifications</h1>
+        </a>
       </div>
       <div class="option">
         <i class="fa fa-paper-plane" aria-hidden="true"></i>
 
-        <h1>Direct</h1>
+        <a href="#">
+          <h1>Direct</h1>
+        </a>
       </div>
       <div class="option">
         <i class="fa fa-table" aria-hidden="true"></i>
-        <h1>IGTV</h1>
+
+        <a href="#">
+          <h1>IGTV</h1>
+        </a>
       </div>
       <div class="option">
         <i class="fa fa-balance-scale" aria-hidden="true"></i>
-        <h1>Stats</h1>
+
+        <a href="#">
+          <h1>Stats</h1>
+        </a>
       </div>
       <div class="option">
         <i class="fa fa-cog" aria-hidden="true"></i>
-        <h1>Settings</h1>
+
+        <a href="#">
+          <h1>Settings</h1>
+        </a>
       </div>
 
-      <div class="line" ><hr></div>
+      <div class="line"><hr /></div>
 
       <div class="option">
-        <i class="fa fa-share" aria-hidden="true"></i>
+        <a href="#">
+          <i class="fa fa-share" aria-hidden="true"></i>
+        </a>
 
-        <h1>Logout</h1>
+        
+        <a href="#">
+          <h1>Logout</h1>
+        </a>
+
+        
       </div>
     </div>
   </div>
@@ -51,6 +76,13 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+  color: #eee;
+}
+a:hover {
+  color: rgb(255, 193, 145);
+}
 .option {
   display: flex;
   width: 100%;
@@ -62,7 +94,6 @@ export default {
 .body {
   background-color: #323440;
   color: #eee;
-
 }
 .menu {
   margin: auto;
@@ -73,5 +104,5 @@ export default {
 }
 h1 {
   font-size: 18px;
-}   
+}
 </style>
